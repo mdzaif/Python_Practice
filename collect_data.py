@@ -5,15 +5,13 @@ import re
 from bs4 import BeautifulSoup
 import pandas as pd
 
-r = requests.get('https://github.com/mdzaif?tab=repositories')
+user = input("Enter your GitHub user name: ")
+# link contains the a user's github repositories list link.
+link = 'https://github.com/'+user+'?tab=repositories'
+r = requests.get(link)
 rc = r.content
 s = BeautifulSoup(rc, 'html.parser') # prasering with html type of the content from the request.
-
 q = s.find_all('li', {'class' : 'col-12 d-flex flex-justify-between width-full py-4 border-bottom color-border-muted public source'})
-#q1 = s.find_all('div', {'class' : 'js-profile-editable-replace'})
-#dct['Name'] = t.find('span', {'itemprop' : 'name'}).text.strip()
-#dct['User Name'] = t.find('span', {'itemprop' : 'additionalName'}).text.strip()
-
 
 li = []
 for repo in q:
@@ -27,6 +25,7 @@ for repo in q:
         dct['Description'] = repo.find('p', {'class': 'col-9 d-inline-block color-fg-muted mb-2 pr-4'}).text.strip()
     else:
         dct['Description'] = "No Description Found"
+    dct['Last Update'] = repo.find('relative-time', {'class' : 'no-wrap'}).text.strip()
     if(repo.find('a', {'class': 'Link--muted mr-3'})):
         dct['Total Star'] = repo.find('a', {'class': 'Link--muted mr-3'}).text.strip()
     else:
@@ -36,8 +35,7 @@ for repo in q:
     ht = 'https://github.com'+ht
     dct['Repository Link'] = ht
     li.append(dct)
-li.reverse()
 df = pd.DataFrame(li)
 df.to_csv('list_of_project.csv')
 print("process completed!")
-    
+   
