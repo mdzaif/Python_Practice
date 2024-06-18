@@ -1,15 +1,16 @@
 ,Repository Name,Programming Language,Description,Total Star,Repository Link
-0,My_Setup,Shell,Configuration guide for my personal environment setup,0,https://github.com/mdzaif/My_Setup
-1,AI,Prolog,Codes from Aritificial Intelligence Lab Course,0,https://github.com/mdzaif/AI
-2,mdzaif,No Programming Language Found,Customize github account,0,https://github.com/mdzaif/mdzaif
-3,portfolio,HTML,My portfolio,1,https://github.com/mdzaif/portfolio
-4,ansible_learn,Jinja,Basic Ansible instructions for server maintenance,0,https://github.com/mdzaif/ansible_learn
-5,Shell_Scripting,Shell,Created Shell Script for learning,0,https://github.com/mdzaif/Shell_Scripting
-6,Python_Script,Python,No Description Found,0,https://github.com/mdzaif/Python_Script
-7,CPP_Practice,C++,C++ practice code,1,https://github.com/mdzaif/CPP_Practice
-8,C_Practice,C,C programming practice code,1,https://github.com/mdzaif/C_Practice
-9,Routine_Generator,Dart,My university project,0,https://github.com/mdzaif/Routine_Generator
-10,Hackerrank_bash,Shell,Solved problem from Hackerrank on Bash,0,https://github.com/mdzaif/Hackerrank_bash
-11,DIGITAL_CLOCK,C++,Digital clock using C++,0,https://github.com/mdzaif/DIGITAL_CLOCK
-12,my_calendar,C,Shows the calendar which year is given input by the user.,0,https://github.com/mdzaif/my_calendar
-13,My_Basic_Code,C,"Print the ""Hello World"" with c",0,https://github.com/mdzaif/My_Basic_Code
+0,My_Basic_Code,C,"Print the ""Hello World"" with c",0,https://github.com/mdzaif/My_Basic_Code
+1,my_calendar,C,Shows the calendar which year is given input by the user.,0,https://github.com/mdzaif/my_calendar
+2,DIGITAL_CLOCK,C++,Digital clock using C++,0,https://github.com/mdzaif/DIGITAL_CLOCK
+3,Hackerrank_bash,Shell,Solved problem from Hackerrank on Bash,0,https://github.com/mdzaif/Hackerrank_bash
+4,Routine_Generator,Dart,My university project,0,https://github.com/mdzaif/Routine_Generator
+5,C_Practice,C,C programming practice code,1,https://github.com/mdzaif/C_Practice
+6,CPP_Practice,C++,C++ practice code,1,https://github.com/mdzaif/CPP_Practice
+7,Python_Script,Python,No Description Found,0,https://github.com/mdzaif/Python_Script
+8,Shell_Scripting,Shell,Created Shell Script for learning,0,https://github.com/mdzaif/Shell_Scripting
+9,ansible_learn,Jinja,Basic Ansible instructions for server maintenance,0,https://github.com/mdzaif/ansible_learn
+10,portfolio,HTML,My portfolio,1,https://github.com/mdzaif/portfolio
+11,mdzaif,No Programming Language Found,Customize github account,0,https://github.com/mdzaif/mdzaif
+12,AI,Prolog,Codes from Aritificial Intelligence Lab Course,0,https://github.com/mdzaif/AI
+13,My_Setup,Shell,Configuration guide for my personal environment setup,0,https://github.com/mdzaif/My_Setup
+14,Python_Practice,Python,Python Practice codes are stored here,0,https://github.com/mdzaif/Python_Practice

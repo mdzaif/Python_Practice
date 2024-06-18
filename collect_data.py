@@ -36,7 +36,7 @@ for repo in q:
     ht = 'https://github.com'+ht
     dct['Repository Link'] = ht
     li.append(dct)
-
+li.reverse()
 df = pd.DataFrame(li)
 df.to_csv('list_of_project.csv')
 print("process completed!")
