@@ -5,7 +5,7 @@ import re
 from bs4 import BeautifulSoup
 import pandas as pd
 
-user = input("Enter your GitHub user name: ")
+user = input("Enter your GitHub user name: ").strip()
 # link contains the a user's github repositories list link.
 link = 'https://github.com/'+user+'?tab=repositories'
 r = requests.get(link)
