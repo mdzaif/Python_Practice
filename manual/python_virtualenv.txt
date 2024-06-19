@@ -1,0 +1,12 @@
+# Install
+sudo apt install python3-virtualenv
+
+# Create project file
+virtualenv -p /usr/bin/python3 <project_name>
+
+# activate and deactivate the environment
+naviagte project directory;
+type: source bin/activate
+
+for deactivation
+type: deactivate
