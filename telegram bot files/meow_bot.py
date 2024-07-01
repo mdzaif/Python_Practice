@@ -24,17 +24,17 @@ async def services(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def favor_keyboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [
-            InlineKeyboardButton('Pyhon', 'https://youtube.com/playlist?list=PLT98CRl2KxKGIazPd2nQEPbG7sQpT8LEj&si=jVNwk1eZHecmCCri'),
-            InlineKeyboardButton('Shell Script', 'https://youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w&si=CmjuUpimaJEeyhRz'),
-            InlineKeyboardButton('Git', 'https://git-scm.com/docs/gittutorial'),
-            InlineKeyboardButton('ollama Setup', 'https://ollama.com', 'https://github.com/ollama/ollama'),
-            InlineKeyboardButton('Open Source AI Model', 'https://huggingface.co/models')
+            InlineKeyboardButton('ser1', 'link1'),
+            InlineKeyboardButton('ser2', 'link2'),
+            InlineKeyboardButton('ser3', 'link3'),
+            InlineKeyboardButton('ser4', 'link4'),
+            InlineKeyboardButton('ser5', 'link5')
         ]
     ]
     await update.message.reply_text('Learn with us with best resources', reply_markup = InlineKeyboardMarkup(keyboard))
 
 def main():
-    application = Application.builder().token('6994561004:AAGLrnpXG8UrqFPI6R1ZnN2Uv6I_M0nePCI').build()
+    application = Application.builder().token('api_key').build()
 
     application.add_handler(CommandHandler('start', start))
     application.add_handler(CommandHandler('help', help))
