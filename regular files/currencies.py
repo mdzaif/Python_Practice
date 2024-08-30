@@ -1,7 +1,11 @@
+#!/usr/bin python3
+
 import requests
 from bs4 import BeautifulSoup
 import sys
 import csv
+import time
+from fuzzywuzzy import process
 
 def cal(amt, cur1, cur2):
     
@@ -31,8 +35,8 @@ def cal(amt, cur1, cur2):
 
     else:
         url = req(f'https://www.xe.com/currencyconverter/convert/?Amount={amt}&From={cur1}&To={cur2}')
-        q2 = url.find_all('p', {'class' : 'sc-295edd9f-0 lfRgod'})
-        q3 = url.find_all('p', {'class' : 'sc-295edd9f-1 jqMUXt'})
+        q2 = url.find_all('p', {'class' : 'sc-e08d6cef-0 jyLOq'})
+        q3 = url.find_all('p', {'class' : 'sc-e08d6cef-1 fwpLse'})
         s1 = s2 = ''
         for t,e in zip(q2, q3):
             s1 = t.text
@@ -42,6 +46,17 @@ def cal(amt, cur1, cur2):
         print('\n-------------INFORMATION---------------\n')
         info()
 
+def load_data(filename):
+    with open(filename, newline='\n') as csvfile:
+        reader = csv.DictReader(csvfile)
+        data = [row for row in reader]  # Load all rows into a list of dictionaries
+    return data
+
+def suggest(cur):
+    choices = [f"{row['Currency ISO code']} - {row['Currency name']}" for row in data]
+    matches = process.extract(cur, choices, limit=10)
+    return matches
+
 def currency_check(cur):
 
     with open('currency.csv') as cur_iso:
@@ -49,11 +64,19 @@ def currency_check(cur):
         for rows in read:
             if rows['Currency ISO code'] == cur:
                 return cur
-    print(f"Invaild currency : {cur}")
-    sys.exit(1)
-
+        if rows['Currency ISO code'] != cur:
+            print(f"Invaild currency : {cur}")
+            sugst = suggest(cur)
+            if sugst:
+                print("Suggestions:")
+                for suggestion, score in sugst:
+                    print(f"- {suggestion} (Score: {score})")
+                    sys.exit(1)
+            else:
+                print("No suggestions found.")
+                sys.exit(1)
+data = load_data('currency.csv')
 if __name__ == "__main__":
-    
     print('-----WELCOME TO CURRENCY CONVERTER ------------')
     amt = int(input("Ammount: ").strip())
     cur1 = currency_check(input("From: ").upper().strip())
