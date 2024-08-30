@@ -4,6 +4,9 @@ import requests
 import re
 from bs4 import BeautifulSoup
 import pandas as pd
+import time
+import csv
+from prettytable import PrettyTable
 
 user = input("Enter your GitHub user name: ").strip()
 # link contains the a user's github repositories list link.
@@ -14,8 +17,10 @@ s = BeautifulSoup(rc, 'html.parser') # prasering with html type of the content f
 q = s.find_all('li', {'class' : 'col-12 d-flex flex-justify-between width-full py-4 border-bottom color-border-muted public source'})
 
 li = []
+cnt = 1
 for repo in q:
     dct = {}
+    dct['Sl. No'] = cnt
     dct['Repository Name'] = repo.find('a', {'itemprop' : 'name codeRepository'}).text.strip()
     if(repo.find('span', {'itemprop' : 'programmingLanguage'})):
         dct['Programming Language'] = repo.find('span', {'itemprop' : 'programmingLanguage'}).text.strip()
@@ -35,7 +40,29 @@ for repo in q:
     ht = 'https://github.com'+ht
     dct['Repository Link'] = ht
     li.append(dct)
+    cnt += 1
 df = pd.DataFrame(li)
 df.to_csv('list_of_project.csv')
 print("process completed!")
    
+
+
+print("Visualizing data....")
+time.sleep(3)
+
+x = PrettyTable()
+x.field_names = ["Sl. No", "Repository Name", "Programming Language", "Description", "Last Update", "Total Star", "Repository Link"]
+
+
+with open('list_of_project.csv') as f:
+    r= csv.reader(f)
+
+    next(r)
+    
+    for row in r:
+
+        if len(row) == len(x.field_names) + 1:
+            x.add_row(row[1:])
+        else:
+            print(f"Skipping row due to column mismatch: {row}")
+print(x)
