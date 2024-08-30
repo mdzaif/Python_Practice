@@ -33,7 +33,7 @@ deactivate
 <b> Install required Libraries </b>
 
 ```bash
-pip3 install -r requirment.txt
+pip3 install -r requirement.txt
 ```
 
 
