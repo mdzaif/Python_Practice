@@ -10,3 +10,8 @@ type: source bin/activate
 
 for deactivation
 type: deactivate
+
+
+# use command
+pip3 freeze > requirement.txt : store library information in requirement.txt
+pip3 list : make table for installed libraries
