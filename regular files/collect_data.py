@@ -1,7 +1,6 @@
 #!/usr/bin python3
 
 import requests
-import re
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
