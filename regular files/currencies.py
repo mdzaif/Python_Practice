@@ -17,7 +17,7 @@ def cal(amt, cur1, cur2):
 
     def info():
         url1 = req(f'https://www.xe.com/currencyconverter/convert/?Amount=2&From={cur1}&To={cur2}')
-        q1 = url1.find_all('div', {'class' : 'sc-ac62c6d1-0 GwlFu'})
+        q1 = url1.find_all('div', {'class' : 'sc-98b4ec47-0 jnAVFH'})
         q1 = str(q1)
         s = BeautifulSoup(q1, 'html.parser')
         q1 = s.find_all('p')
@@ -35,8 +35,8 @@ def cal(amt, cur1, cur2):
 
     else:
         url = req(f'https://www.xe.com/currencyconverter/convert/?Amount={amt}&From={cur1}&To={cur2}')
-        q2 = url.find_all('p', {'class' : 'sc-e08d6cef-0 jyLOq'})
-        q3 = url.find_all('p', {'class' : 'sc-e08d6cef-1 fwpLse'})
+        q2 = url.find_all('p', {'class' : "sc-294d8168-0 cdcpOz"})
+        q3 = url.find_all('p', {'class' : "sc-294d8168-1 hVDvqw"})
         s1 = s2 = ''
         for t,e in zip(q2, q3):
             s1 = t.text

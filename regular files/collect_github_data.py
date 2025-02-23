@@ -14,17 +14,35 @@ r = requests.get(link)
 rc = r.content
 s = BeautifulSoup(rc, 'html.parser') # prasering with html type of the content from the request.
 q = s.find_all('li', {'class' : 'col-12 d-flex flex-justify-between width-full py-4 border-bottom color-border-muted public source'})
-
 li = []
 cnt = 1
 for repo in q:
     dct = {}
     dct['Sl. No'] = cnt
     dct['Repository Name'] = repo.find('a', {'itemprop' : 'name codeRepository'}).text.strip()
-    if(repo.find('span', {'itemprop' : 'programmingLanguage'})):
-        dct['Programming Language'] = repo.find('span', {'itemprop' : 'programmingLanguage'}).text.strip()
+    ht = repo.find('a')
+    ht = ht.get('href')
+    ht = 'https://github.com' + ht
+    r1 = requests.get(ht)
+    rc1 = r1.content
+    s1 = BeautifulSoup(rc1, 'html.parser') # prasering with html type of the content from the request.
+    #q1 = s1.find_all('li', {'class' : 'd-inline'})
+    q1 = s1.find_all('li', {'class' : 'd-inline'})
+    pro_l = ''
+    for pro_lang in q1:
+        p = pro_lang.find('span', {'class': "color-fg-default text-bold mr-1"})
+        if p != None:
+            pro_l += p.text.strip() + ', '
+        else:
+            break
+    if(pro_l != ''):
+        dct['Programming Language'] = pro_l[:-2]
     else:
         dct['Programming Language'] = "No Programming Language Found"
+    #if(repo.find('span', {'itemprop' : 'programmingLanguage'})):
+    #    dct['Programming Language'] = repo.find('span', {'itemprop' : 'programmingLanguage'}).text.strip()
+    #else:
+    #    dct['Programming Language'] = "No Programming Language Found"
     if(repo.find('p', {'class': 'col-9 d-inline-block color-fg-muted mb-2 pr-4'})):
         dct['Description'] = repo.find('p', {'class': 'col-9 d-inline-block color-fg-muted mb-2 pr-4'}).text.strip()
     else:
@@ -34,9 +52,7 @@ for repo in q:
         dct['Total Star'] = repo.find('a', {'class': 'Link--muted mr-3'}).text.strip()
     else:
         dct['Total Star'] = '0'
-    ht = repo.find('a')
-    ht = ht.get('href')
-    ht = 'https://github.com'+ht
+
     dct['Repository Link'] = ht
     li.append(dct)
     cnt += 1
