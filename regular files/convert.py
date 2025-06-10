@@ -1,15 +1,34 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = ["nbformat", "nbconvert", "requests", "pdfkit"]
+# ///
+
 #!/usr/bin/ python3
 
 # more task to do: more error handling needed.
 # Only for google colab
 
-# Additional install to need: sudo apt install wkhtmltopdf
+# Additional package: sudo apt install wkhtmltopdf # linux
+# on windows: winget install wkhtmltopdf.wkhtmltox
+# edit environment variable: mostly the path is: 'C:\Program Files\wkhtmltopdf\bin\'
 
 import nbformat
 from nbconvert import HTMLExporter
 import requests
 import pdfkit
 import sys
+import platform
+from pathlib import Path
+
+def check_sys_path():
+
+    if platform.system() == "Windows":
+        return r"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe" # It is good practice check your system has same path
+    else:
+        return "/usr/bin/wkhtmltopdf"
+
+def basename(f):
+    return Path(f).stem
 
 print("Download the .ipynb file from google colab")
 print("Collect the file id by check the browser link: https://colab.research.google.com/drive/<file_id>")
@@ -39,13 +58,15 @@ htmlexp = HTMLExporter()
 
 (body, resources) = htmlexp.from_notebook_node(nb_con)
 
-html_path = input("Enter the html file name: ")
+html_path = basename(file) + '.html'
 with open(html_path, 'w') as f:
     f.write(body)
 
-pdf_path = input("Enter the pdf file name: ")
+pdf_path = basename(html_path) + '.pdf'
 
-path_wkhtmltopdf = '/usr/bin/wkhtmltopdf'  # For Linux/macOS
+#path_wkhtmltopdf = '/usr/bin/wkhtmltopdf'  # For Linux/macOS
+
+path_wkhtmltopdf = check_sys_path()
 
 config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
 

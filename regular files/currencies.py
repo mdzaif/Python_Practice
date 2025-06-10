@@ -1,10 +1,14 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = ["requests", "bs4", "fuzzywuzzy"]
+# ///
+
 #!/usr/bin python3
 
 import requests
 from bs4 import BeautifulSoup
 import sys
 import csv
-import time
 from fuzzywuzzy import process
 
 def cal(amt, cur1, cur2):
@@ -35,8 +39,8 @@ def cal(amt, cur1, cur2):
 
     else:
         url = req(f'https://www.xe.com/currencyconverter/convert/?Amount={amt}&From={cur1}&To={cur2}')
-        q2 = url.find_all('p', {'class' : "sc-294d8168-0 cdcpOz"})
-        q3 = url.find_all('p', {'class' : "sc-294d8168-1 hVDvqw"})
+        q2 = url.find_all('p', {'class' : "sc-708e65be-0 kRaehF"})
+        q3 = url.find_all('p', {'class' : "sc-708e65be-1 chuBHG"})
         s1 = s2 = ''
         for t,e in zip(q2, q3):
             s1 = t.text

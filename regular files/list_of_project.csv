@@ -1,20 +1,21 @@
 ,Sl. No,Repository Name,Programming Language,Description,Last Update,Total Star,Repository Link
-0,1,mdzaif,No Programming Language Found,Customize github account,"Feb 21, 2025",0,https://github.com/mdzaif/mdzaif
-1,2,Number_Plate_Detection_Recognition,"Jupyter Notebook, Python",UI for Bangla Number Plate Detection and Recognition,"Feb 10, 2025",0,https://github.com/mdzaif/Number_Plate_Detection_Recognition
-2,3,My_Setup,Shell,Configuration guide for my personal environment setup,"Jan 21, 2025",0,https://github.com/mdzaif/My_Setup
-3,4,Python_Script,"Python, Shell, HTML",No Description Found,"Dec 21, 2024",0,https://github.com/mdzaif/Python_Script
-4,5,Simulation,Jupyter Notebook,No Description Found,"Dec 12, 2024",1,https://github.com/mdzaif/Simulation
-5,6,test_micro,C++,No Description Found,"Nov 6, 2024",0,https://github.com/mdzaif/test_micro
-6,7,rust_projects,Rust,No Description Found,"Oct 20, 2024",0,https://github.com/mdzaif/rust_projects
-7,8,Powershell,PowerShell,Explore the windows powershell,"Oct 10, 2024",1,https://github.com/mdzaif/Powershell
-8,9,Python_Practice,Python,Python Practice codes are stored here,"Sep 7, 2024",1,https://github.com/mdzaif/Python_Practice
-9,10,Shell_Scripting,Shell,Created Shell Script for learning,"Sep 5, 2024",1,https://github.com/mdzaif/Shell_Scripting
-10,11,AI,"Prolog, Python",Codes from Aritificial Intelligence Lab Course,"Sep 3, 2024",0,https://github.com/mdzaif/AI
-11,12,ansible_learn,"Jinja, HTML",Basic Ansible instructions for server maintenance,"May 7, 2024",0,https://github.com/mdzaif/ansible_learn
-12,13,CPP_Practice,"C++, C",C++ practice code,"Apr 18, 2024",1,https://github.com/mdzaif/CPP_Practice
-13,14,C_Practice,C,C programming practice code,"Apr 7, 2024",1,https://github.com/mdzaif/C_Practice
-14,15,Routine_Generator,"Dart, JavaScript, HTML, Swift, PureBasic, Kotlin, Objective-C",My university project,"Aug 7, 2023",0,https://github.com/mdzaif/Routine_Generator
-15,16,Hackerrank_bash,Shell,Solved problem from Hackerrank on Bash,"Jul 22, 2023",1,https://github.com/mdzaif/Hackerrank_bash
-16,17,DIGITAL_CLOCK,C++,Digital clock using C++,"May 26, 2023",0,https://github.com/mdzaif/DIGITAL_CLOCK
-17,18,my_calendar,C,Shows the calendar which year is given input by the user.,"Jul 10, 2022",0,https://github.com/mdzaif/my_calendar
-18,19,My_Basic_Code,C,"Print the ""Hello World"" with c","Oct 16, 2021",0,https://github.com/mdzaif/My_Basic_Code
+0,1,mdzaif,No Programming Language Found,Customize github account,"Jun 9, 2025",0,https://github.com/mdzaif/mdzaif
+1,2,My_Setup,Shell,Configuration guide for my personal environment setup,"May 31, 2025",0,https://github.com/mdzaif/My_Setup
+2,3,Powershell,PowerShell,Explore the windows powershell,"May 31, 2025",1,https://github.com/mdzaif/Powershell
+3,4,Shell_Scripting,Shell,Created Shell Script for learning,"May 19, 2025",1,https://github.com/mdzaif/Shell_Scripting
+4,5,Python_Script,"Python, Shell, HTML",No Description Found,"May 8, 2025",0,https://github.com/mdzaif/Python_Script
+5,6,AEScrypt_Python,"Python, Shell",AEScrypt tool develop with python,"Apr 20, 2025",0,https://github.com/mdzaif/AEScrypt_Python
+6,7,Number_Plate_Detection_Recognition,"Jupyter Notebook, Python, Dockerfile",UI for Bangla Number Plate Detection and Recognition,"Mar 20, 2025",0,https://github.com/mdzaif/Number_Plate_Detection_Recognition
+7,8,Python_Practice,Python,Python Practice codes are stored here,"Feb 24, 2025",1,https://github.com/mdzaif/Python_Practice
+8,9,Simulation,Jupyter Notebook,No Description Found,"Dec 12, 2024",1,https://github.com/mdzaif/Simulation
+9,10,test_micro,C++,No Description Found,"Nov 6, 2024",0,https://github.com/mdzaif/test_micro
+10,11,rust_projects,Rust,No Description Found,"Oct 20, 2024",0,https://github.com/mdzaif/rust_projects
+11,12,AI,"Prolog, Python",Codes from Aritificial Intelligence Lab Course,"Sep 3, 2024",0,https://github.com/mdzaif/AI
+12,13,ansible_learn,"Jinja, HTML",Basic Ansible instructions for server maintenance,"May 7, 2024",0,https://github.com/mdzaif/ansible_learn
+13,14,CPP_Practice,"C++, C",C++ practice code,"Apr 18, 2024",1,https://github.com/mdzaif/CPP_Practice
+14,15,C_Practice,C,C programming practice code,"Apr 7, 2024",1,https://github.com/mdzaif/C_Practice
+15,16,Routine_Generator,"Dart, JavaScript, HTML, Swift, PureBasic, Kotlin, Objective-C",My university project,"Aug 7, 2023",0,https://github.com/mdzaif/Routine_Generator
+16,17,Hackerrank_bash,Shell,Solved problem from Hackerrank on Bash,"Jul 22, 2023",1,https://github.com/mdzaif/Hackerrank_bash
+17,18,DIGITAL_CLOCK,C++,Digital clock using C++,"May 26, 2023",0,https://github.com/mdzaif/DIGITAL_CLOCK
+18,19,my_calendar,C,Shows the calendar which year is given input by the user.,"Jul 10, 2022",0,https://github.com/mdzaif/my_calendar
+19,20,My_Basic_Code,C,"Print the ""Hello World"" with c","Oct 16, 2021",0,https://github.com/mdzaif/My_Basic_Code

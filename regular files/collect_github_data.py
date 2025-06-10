@@ -1,3 +1,8 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = ["requests", "pandas", "bs4", "prettytable"]
+# ///
+
 #!/usr/bin python3
 
 import requests
